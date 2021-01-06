@@ -1,6 +1,7 @@
 package org.acme.graph;
 
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+
 import org.springframework.boot.builder.SpringApplicationBuilder;
 
 import com.github.ulisesbocchio.jar.resources.JarResourceLoader;
@@ -32,6 +33,8 @@ public class Application {
 		 * 
 		 * @see https://stackoverflow.com/a/37202883
 		 */
+		System.setProperty("spring.jackson.serialization.INDENT_OUTPUT", "true");
+
 		new SpringApplicationBuilder().sources(Application.class).resourceLoader(new JarResourceLoader()).run(args);
 	}
 

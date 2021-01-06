@@ -50,11 +50,12 @@ public class Vertex {
 	
 	private List<Edge> outEdges;
 	
-	
+	@JsonIgnore
 	public Collection<Edge> getInEdges() {
 		return this.inEdges;
 	}
 	
+	@JsonIgnore
 	public Collection<Edge> getoutEdges() {
 		return this.outEdges;
 	}
