@@ -1,6 +1,7 @@
 package org.acme.graph;
 
 import org.acme.graph.model.Edge;
+
 import org.acme.graph.model.Graph;
 import org.acme.graph.model.Vertex;
 
@@ -39,26 +40,27 @@ public class TestGraphFactory {
 		d.setCoordinate(new Coordinate(1.0, 1.0));		
 		graph.getVertices().add(d);
 		
-		Edge ab = new Edge();
+		Edge ab = new Edge(a,b);
 		ab.setId("ab");
-		ab.setSource(a);
-		ab.setTarget(b);
+		//ab.setSource(a);
+		//ab.setTarget(b);
 		graph.getEdges().add(ab);
 		
-		Edge bc = new Edge();
+		Edge bc = new Edge(b,c);
 		bc.setId("bc");
-		bc.setSource(b);
-		bc.setTarget(c);
+		//bc.setSource(b);
+		//bc.setTarget(c);
 		graph.getEdges().add(bc);
 
-		Edge ad = new Edge();
+		Edge ad = new Edge(a,b);
 		ad.setId("ad");		
-		ad.setSource(a);
-		ad.setTarget(d);
-		graph.getEdges().add(ad);		
+	
+		graph.getEdges().add(ad);	
 		
 		return graph;
 	}
+	
+	
 
 	
 }
