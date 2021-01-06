@@ -47,6 +47,7 @@ public class Graph {
 	 * @param id
 	 * @return
 	 */
+
 	public Vertex findVertex(String id) {
 		for (Vertex vertex : vertices) {
 			if (vertex.getId().equals(id)) {
@@ -71,6 +72,7 @@ public class Graph {
 		}
 		return null;
 	}
+	
 
 	/**
 	 * Récupération de la liste des arcs
@@ -94,6 +96,7 @@ public class Graph {
 		Vertex v = new Vertex();
 		v.setId(id); 
 		v.setCoordinate(coordinate);
+		this.vertices.add(v);
 		
 		return v;
 	}
@@ -103,13 +106,17 @@ public class Graph {
 		
 		Edge e = new Edge(source,target);
 		
+		e.setId(id);
+		
+		this.edges.add(e);
+		
 		
 		return e;
 	
 	}
 	
-	
-	
+
+
 	
 	
 
